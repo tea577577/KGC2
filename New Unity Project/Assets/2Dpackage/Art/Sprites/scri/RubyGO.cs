@@ -67,5 +67,6 @@ public class RubyGO : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth); //加血機制-2
         print("Ruby 最新的血量為：" + currentHealth); //檢查是否有加血
     }
-
+    
+    
 }
