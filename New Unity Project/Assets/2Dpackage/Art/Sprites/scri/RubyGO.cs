@@ -62,6 +62,13 @@ public class RubyGO : MonoBehaviour
 
         // 血量控制
         
+        // 發射子彈3
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Launch();
+        }
+
+
     }
 
     public void ChangeHealth(int amount)
