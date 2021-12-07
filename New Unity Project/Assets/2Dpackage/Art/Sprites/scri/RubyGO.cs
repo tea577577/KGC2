@@ -20,6 +20,9 @@ public class RubyGO : MonoBehaviour
     [Header("當前血量"), Range(0, 5)]
     public int currentHealth;
 
+    // 發射子彈1
+    public GameObject projectilePrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,5 +71,17 @@ public class RubyGO : MonoBehaviour
         print("Ruby 最新的血量為：" + currentHealth); //檢查是否有加血
     }
     
+    //發射子彈 2/3
+    private void Launch()
+    {
+        GameObject projectileOnject = Instantiate(projectilePrefab,
+            rb.position, Quaternion.identity);
+
+        Bullet bullet = projectileOnject.GetComponent<Bullet>();
+
+        bullet.Launch(lookDirection, 300);
+
+        rubyAnimator.SetTrigger("Launch");
+    }
     
 }
